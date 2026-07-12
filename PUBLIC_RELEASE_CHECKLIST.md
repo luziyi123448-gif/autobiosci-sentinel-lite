@@ -1,6 +1,6 @@
 # Public Release Checklist — 0.3.0rc1
 
-Status: **PUBLIC RELEASE CANDIDATE**. Human gates are approved. Repository publication is authorized; a GitHub Release, Zenodo record, DOI reservation, and ORCID changes remain separate actions.
+Status: **PUBLIC RELEASE CANDIDATE**. Human gates are approved. The repository is published from clean allowlist history at `https://github.com/luziyi123448-gif/autobiosci-sentinel-lite`; a GitHub Release, Zenodo record, DOI reservation, and ORCID changes remain separate actions.
 
 HUMAN_GATE: `approved`. The signed local control record is excluded from the public bundle under the approved privacy scope.
 

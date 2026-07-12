@@ -22,9 +22,9 @@ python -c "import subprocess,sys; subprocess.check_call([sys.executable,'-m','pi
 
 Release assets should be limited to the wheel/source bundle produced from the clean public allowlist plus a SHA-256 checksum file. Working databases, cached abstracts, reports, logs, labels, transcripts, and prototype run artifacts are excluded.
 
-## Remaining external actions
+## Repository and remaining external actions
 
-- Publish only the clean allowlist repository; never publish the research-workspace history.
+- The public repository was created from clean allowlist history; the research-workspace history remains excluded.
 - Re-run the recorded checks against the final commit before creating tag `v0.3.0rc1`.
 - Create the GitHub prerelease and attach its checksums only when explicitly requested.
 - Enable Zenodo and publish a DOI only as a separate, explicit action.
