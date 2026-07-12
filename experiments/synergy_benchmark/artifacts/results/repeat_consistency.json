@@ -1,0 +1,10 @@
+{
+  "same_input_sha256": true,
+  "same_seed_and_prior_seed": true,
+  "normalized_sequence_identical": true,
+  "cutoff_metrics_identical": true,
+  "matches_expected_normalized_sequence_sha256": true,
+  "archive_bytes_expected_identical": false,
+  "passed": true,
+  "note": "Archive hashes and timestamps are not compared for determinism; the timestamp-free ordered labeling sequence is authoritative."
+}

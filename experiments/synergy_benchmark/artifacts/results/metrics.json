@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "synergy_sep_2021_asreview_3_0_8",
+  "generated_at_utc": "2026-07-10T20:57:57.183478+00:00",
+  "overall_runtime_seconds": 17.41125689999899,
+  "dataset": {
+    "id": "Sep_2021",
+    "release": "SYNERGY 1.0",
+    "sha256": "b28f66230a6dde6e0a32a82fda117e138dca71cebc7efdf71c04fe8b2584e88b",
+    "records": 271,
+    "relevant": 40,
+    "fully_labeled": true,
+    "missing_text_counts": {
+      "title": 0,
+      "abstract": 1
+    }
+  },
+  "method": {
+    "asreview_version": "3.0.8",
+    "synergy_dataset_package_version": "1.2",
+    "ai": "elas_u4",
+    "seed": 535,
+    "prior_seed": 535,
+    "n_prior_included": 1,
+    "n_prior_excluded": 1,
+    "n_query": 1,
+    "n_stop": -1,
+    "group_similar_records": false,
+    "repeats": 2,
+    "evaluation": "retrospective cutoff reconstructed from full rankings"
+  },
+  "metric_definitions": {
+    "precision_screened_set": "relevant screened / all screened at cutoff",
+    "recall": "relevant screened / all SYNERGY relevant records",
+    "missed_relevant_records": "SYNERGY relevant records after cutoff",
+    "work_saved_fraction": "unscreened records / all records",
+    "wss_at_target_recall": "work_saved_fraction - (1 - recall_target), equivalent to recall_target - screened_fraction"
+  },
+  "runs": [
+    {
+      "repeat": 1,
+      "runtime_seconds": 8.246321600003284,
+      "return_code": 0,
+      "archive_path": "artifacts/runs/run_1.asreview",
+      "archive_sha256": "6337a14f4dd0a895780660bc53f8858d05ea39590d4b8dfd8b930424d40b0a2e",
+      "stdout_log": "artifacts/runs/run_1.stdout.log",
+      "stderr_log": "artifacts/runs/run_1.stderr.log",
+      "replay_command": "asreview simulate data/Sep_2021.csv -o artifacts/runs/run_1.asreview --ai elas_u4 --seed 535 --prior-seed 535 --n-prior-included 1 --n-prior-excluded 1 --n-query 1 --n-stop -1",
+      "asreview_loss": 0.176,
+      "asreview_ndcg": 0.751,
+      "project_file_version": 3,
+      "result_rows": 271,
+      "duplicate_of_count": 0,
+      "observed_model_components": [
+        {
+          "classifier": "svm",
+          "querier": "max",
+          "balancer": "balanced",
+          "feature_extractor": "tfidf"
+        }
+      ],
+      "normalized_sequence_fields": [
+        "record_id",
+        "label",
+        "classifier",
+        "querier",
+        "balancer",
+        "feature_extractor",
+        "training_set"
+      ],
+      "normalized_sequence_sha256": "cf57172fbcb6a445aabdc1a03341dfdc0f7f25834befa1cf8db4508451da4d02",
+      "metrics": {
+        "recall_target": 0.95,
+        "target_relevant_records": 38,
+        "cutoff_rule": "smallest full-ranking prefix with recall >= target",
+        "cutoff_includes_prior_records": true,
+        "screened_records": 143,
+        "screened_fraction": 0.5276752767527675,
+        "precision_screened_set": 0.26573426573426573,
+        "recall": 0.95,
+        "missed_relevant_records": 2,
+        "work_saved_fraction": 0.47232472324723246,
+        "wss_at_target_recall": 0.4223247232472324,
+        "confusion_counts": {
+          "tp": 38,
+          "fp": 105,
+          "fn": 2,
+          "tn": 126
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "runtime_seconds": 2.6124838999967324,
+      "return_code": 0,
+      "archive_path": "artifacts/runs/run_2.asreview",
+      "archive_sha256": "04905b6e229d42615faa987bdd48fe2ec6077da7cd46607b37c27e7472b69bf9",
+      "stdout_log": "artifacts/runs/run_2.stdout.log",
+      "stderr_log": "artifacts/runs/run_2.stderr.log",
+      "replay_command": "asreview simulate data/Sep_2021.csv -o artifacts/runs/run_2.asreview --ai elas_u4 --seed 535 --prior-seed 535 --n-prior-included 1 --n-prior-excluded 1 --n-query 1 --n-stop -1",
+      "asreview_loss": 0.176,
+      "asreview_ndcg": 0.751,
+      "project_file_version": 3,
+      "result_rows": 271,
+      "duplicate_of_count": 0,
+      "observed_model_components": [
+        {
+          "classifier": "svm",
+          "querier": "max",
+          "balancer": "balanced",
+          "feature_extractor": "tfidf"
+        }
+      ],
+      "normalized_sequence_fields": [
+        "record_id",
+        "label",
+        "classifier",
+        "querier",
+        "balancer",
+        "feature_extractor",
+        "training_set"
+      ],
+      "normalized_sequence_sha256": "cf57172fbcb6a445aabdc1a03341dfdc0f7f25834befa1cf8db4508451da4d02",
+      "metrics": {
+        "recall_target": 0.95,
+        "target_relevant_records": 38,
+        "cutoff_rule": "smallest full-ranking prefix with recall >= target",
+        "cutoff_includes_prior_records": true,
+        "screened_records": 143,
+        "screened_fraction": 0.5276752767527675,
+        "precision_screened_set": 0.26573426573426573,
+        "recall": 0.95,
+        "missed_relevant_records": 2,
+        "work_saved_fraction": 0.47232472324723246,
+        "wss_at_target_recall": 0.4223247232472324,
+        "confusion_counts": {
+          "tp": 38,
+          "fp": 105,
+          "fn": 2,
+          "tn": 126
+        }
+      }
+    }
+  ],
+  "repeat_consistency": {
+    "same_input_sha256": true,
+    "same_seed_and_prior_seed": true,
+    "normalized_sequence_identical": true,
+    "cutoff_metrics_identical": true,
+    "matches_expected_normalized_sequence_sha256": true,
+    "archive_bytes_expected_identical": false,
+    "passed": true,
+    "note": "Archive hashes and timestamps are not compared for determinism; the timestamp-free ordered labeling sequence is authoritative."
+  },
+  "failure_cases_path": "artifacts/results/failure_cases.csv",
+  "failure_case_count": 2,
+  "automatic_checks_passed": true,
+  "interpretation_limits": [
+    "One small retrospective dataset cannot establish general performance.",
+    "The 95% cutoff uses complete labels and is not a deployable prospective stopping rule.",
+    "Source-review inclusion decisions may contain errors and are not an infallible gold standard.",
+    "Precision here is screening yield, not classifier precision on unseen predictions.",
+    "Runtime is hardware and environment specific.",
+    "1 record has no abstract.",
+    "Pinned package versions are checked, but wheel hashes are not locked.",
+    "No clinical or biological conclusions are supported."
+  ]
+}

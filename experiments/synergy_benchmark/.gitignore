@@ -1,0 +1,11 @@
+.venv/
+.pip-tmp/
+.tmp/
+.benchmark_staging/
+.benchmark_previous/
+.benchmark.lock
+__pycache__/
+data/*.csv
+artifacts/runs/*.asreview
+artifacts/runs/*.tmp/
+artifacts/runs/*.log

@@ -1,0 +1,8 @@
+{
+  "timestamp_utc": "2026-07-10T20:57:57.197350+00:00",
+  "status": "success",
+  "metrics": "artifacts/results/metrics.json",
+  "failure_cases": "artifacts/results/failure_cases.csv",
+  "repeat_consistency_passed": true,
+  "automatic_checks_passed": true
+}
