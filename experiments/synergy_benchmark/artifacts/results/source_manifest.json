@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-07-10T20:57:46.200858+00:00",
+  "downloaded_this_run": true,
+  "local_file_mtime_utc": "2026-07-10T20:57:46.190350+00:00",
+  "first_retrieved_at_utc": "2026-07-10T20:48:46.375243+00:00",
+  "dataset_id": "Sep_2021",
+  "asreview_dataset_id": "synergy:sep_2021",
+  "dataset_release": "SYNERGY 1.0",
+  "retrieval_method": "official Dataverse metadata plus selected subset files",
+  "retrieval_details": {
+    "metadata_url": "https://dataverse.nl/api/datasets/:persistentId/versions/1.0?persistentId=doi:10.34894/HE6NAQ",
+    "subset_download_url": "https://dataverse.nl/api/access/datafiles/359864,359890,359893,359901,359921",
+    "subset_file_count": 5
+  },
+  "source_package": "synergy-dataset==1.2",
+  "local_path": "data/Sep_2021.csv",
+  "sha256": "b28f66230a6dde6e0a32a82fda117e138dca71cebc7efdf71c04fe8b2584e88b",
+  "bytes": 475133,
+  "records": 271,
+  "label_counts": {
+    "included_1": 40,
+    "excluded_0": 231,
+    "missing": 0
+  },
+  "missing_text_counts": {
+    "title": 0,
+    "abstract": 1
+  },
+  "columns": [
+    "openalex_id",
+    "doi",
+    "title",
+    "abstract",
+    "label_included"
+  ],
+  "label_semantics": "label_included=1 means included by the source systematic review after full-text screening; 0 means excluded. These are source-review decisions, not an infallible human gold standard.",
+  "license": "CC0-1.0",
+  "official_sources": [
+    "https://github.com/asreview/synergy-dataset",
+    "https://doi.org/10.34894/HE6NAQ"
+  ],
+  "raw_data_publication_policy": "Local benchmark input only; do not publish or redistribute this cached CSV."
+}

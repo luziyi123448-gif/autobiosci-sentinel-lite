@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "synthetic_metric_self_check": true,
+    "dataset_sha256_matches": true,
+    "all_dataset_rows_labeled": true,
+    "both_runs_cover_all_records": true,
+    "repeat_consistency": true,
+    "expected_sequence_hash_matches": true,
+    "failure_case_count_matches_fn": true
+  },
+  "passed": true
+}

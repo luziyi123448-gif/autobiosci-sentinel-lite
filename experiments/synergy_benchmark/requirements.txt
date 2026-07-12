@@ -1,0 +1,2 @@
+asreview==3.0.8
+synergy-dataset==1.2

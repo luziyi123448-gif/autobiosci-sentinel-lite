@@ -1,0 +1,27 @@
+{
+  "benchmark_id": "synergy_sep_2021_asreview_3_0_8",
+  "dataset_id": "Sep_2021",
+  "asreview_dataset_id": "synergy:sep_2021",
+  "dataset_release": "SYNERGY 1.0",
+  "synergy_version": "1.0",
+  "expected_sha256": "b28f66230a6dde6e0a32a82fda117e138dca71cebc7efdf71c04fe8b2584e88b",
+  "expected_bytes": 475133,
+  "expected_records": 271,
+  "expected_relevant": 40,
+  "expected_normalized_sequence_sha256": "cf57172fbcb6a445aabdc1a03341dfdc0f7f25834befa1cf8db4508451da4d02",
+  "label_column": "label_included",
+  "recall_target": 0.95,
+  "ai": "elas_u4",
+  "seed": 535,
+  "prior_seed": 535,
+  "n_prior_included": 1,
+  "n_prior_excluded": 1,
+  "n_query": 1,
+  "n_stop": -1,
+  "group_similar_records": false,
+  "repeats": 2,
+  "required_versions": {
+    "asreview": "3.0.8",
+    "synergy-dataset": "1.2"
+  }
+}

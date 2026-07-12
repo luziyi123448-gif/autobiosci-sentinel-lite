@@ -1,0 +1,3 @@
+record_id,dataset_row,openalex_id,doi,title,discovery_rank,cutoff_rank,failure_type,label_source
+19,19,https://openalex.org/W2983898801,https://doi.org/10.33594/000000017,Pterostilbene Improves Cognitive Performance in Aged Rats: An in Vivo Study,213,143,relevant record beyond retrospective 95% recall cutoff,SYNERGY label_included from source review
+176,176,https://openalex.org/W1768069588,https://doi.org/10.3389/fnbeh.2015.00182,Overexpression of mineralocorticoid receptors does not affect memory and anxiety-like behavior in female mice,223,143,relevant record beyond retrospective 95% recall cutoff,SYNERGY label_included from source review

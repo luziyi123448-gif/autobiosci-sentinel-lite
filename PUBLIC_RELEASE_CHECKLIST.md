@@ -26,8 +26,9 @@ Create the public repository or source archive from only:
 - `configs/topics.yaml`
 - `src/autobiosci_sentinel/`
 - `tests/`
+- The frozen single-dataset benchmark files enumerated in `experiments/synergy_benchmark/PUBLIC_RELEASE_RECORD.md`; no other `experiments/` content.
 
-Exclude `AGENTS.md`, `PROJECT_STATE.md`, `HUMAN_GATE.yaml`, `.codex/`, `.codex_tmp/`, `data/`, `outputs/`, `reports/`, `logs/`, `tmp/`, `to_gpt/`, `prototype/ai247/`, caches, secrets, and all local review transcripts. The manual collector workflow is included only after removal of its artifact-upload step, so generated research files remain on its ephemeral runner. The current Git history contains research-workspace material, so publishing the current repository or merely deleting files in a later commit is not sufficient; use a clean public history built from the allowlist.
+Exclude `AGENTS.md`, `PROJECT_STATE.md`, the root `HUMAN_GATE.yaml`, `.codex/`, `.codex_tmp/`, `data/`, `outputs/`, `reports/`, `logs/`, `tmp/`, `to_gpt/`, `prototype/ai247/`, every unlisted `experiments/` file, caches, secrets, and all local review transcripts. Within the approved benchmark, exclude its cached CSV, `.venv/`, raw `.asreview` archives, logs, temporary directories, multi-dataset additions, paper package, and internal GPTweb transport record. The manual collector workflow is included only after removal of its artifact-upload step, so generated research files remain on its ephemeral runner. The current research-workspace history remains excluded; public changes continue from the clean allowlist history.
 
 ## GitHub prerelease
 
