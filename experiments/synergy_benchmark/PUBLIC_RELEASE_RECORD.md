@@ -3,7 +3,7 @@
 - Checked at UTC: `2026-07-12T08:42:28Z`
 - Machine status: `PASS`
 - Benchmark gate status: `HUMAN_ACCEPTANCE_APPROVED`
-- Publication status: `NOT_PUBLISHED`
+- Publication status: `PUBLIC_DRAFT_PR`
 - Human public-acceptance status: `APPROVED`
 
 This record applies only to `experiments/synergy_benchmark`. It does not approve the repository release, select a software license, confirm authorship, change the root `HUMAN_GATE.yaml`, or authorize upload, tagging, DOI creation, Zenodo publication, or any other external action.
@@ -98,11 +98,11 @@ Scope ceiling: this record covers only the frozen files listed above. Later mult
 | 1. Local reproducibility and machine checks | `PASS` | Preserve the hashes above; rerun after any material change. |
 | 2. Benchmark public-acceptance declaration | `PASS` | Approved by 陆梓溢 at `2026-07-12T08:43:57Z` for the frozen scope in this record. |
 | 3. Repository authorship, license, privacy, and AI disclosure | `PASS_ROOT_HUMAN_GATE` | Approved by 陆梓溢 at `2026-07-12T00:19:00Z`: author/ORCID, MIT, privacy boundary, and AI disclosure. |
-| 4. Public allowlist | `CHANGE_REQUIRED` | Explicitly add the approved benchmark files to the root clean-history allowlist; the current top-level allowlist excludes `experiments/`. |
-| 5. Clean build and verification | `PENDING_AFTER_STEP_4` | Build the approved benchmark scope from a clean allowlist checkout, rerun the checks, scan forbidden files and claims, and generate final checksums. |
-| 6. GitHub repository and prerelease | `REPOSITORY_PUSHED_BENCHMARK_NOT_INCLUDED` | The clean software repository exists at `https://github.com/luziyi123448-gif/autobiosci-sentinel-lite`, commit `81f8a848d26e34b9565e67cc8e0217cba484d11f`; add the benchmark only after steps 2, 4, and 5, then create a tag/prerelease only on explicit authorization. |
+| 4. Public allowlist | `PROPOSED_IN_DRAFT_PR` | Draft PR #1 adds only the approved frozen files and updates the root clean-history allowlist; merge remains a separate action. |
+| 5. Clean build and verification | `PASS_FOR_DRAFT_PR` | Exact source-to-public hashes, benchmark structures, automatic checks, Python/PowerShell syntax, sensitive-content scan, 61 local tests, and GitHub CI passed. |
+| 6. GitHub repository and prerelease | `DRAFT_PR_OPEN` | Public Draft PR: `https://github.com/luziyi123448-gif/autobiosci-sentinel-lite/pull/1`; benchmark content commit `43a5ad416b7fc6e7ee0cbb46b3d0a2fe3b384289`. No tag or GitHub Release was created. |
 | 7. Zenodo/DOI, if desired | `OPTIONAL_HUMAN_EXTERNAL_ACTION` | After the approved GitHub release, a human may enable archival integration or upload an approved bundle and publish the record. A DOI is not treated as issued until publication. |
-| 8. Publication record | `NOT_STARTED` | Record public URLs, tag/commit, asset hashes, DOI if any, publisher identity, and UTC publication time; only then change publication status to `PUBLISHED`. |
+| 8. Publication record | `PUBLIC_DRAFT_PR` | PR URL and branch commit are recorded. This is public review state, not a merged release or archived publication. |
 
 Official path references checked on 2026-07-11:
 
@@ -114,4 +114,4 @@ Official path references checked on 2026-07-11:
 
 ## Verdict
 
-The benchmark's deterministic preparation and human public acceptance are complete, and the repository-level authorship, MIT license, privacy scope, and AI disclosure are approved. It is not yet published because `experiments/` is absent from the public allowlist and no clean benchmark-scope release action has occurred. The remaining path is an allowlist change, clean benchmark-scope verification, and separately authorized external release actions.
+The benchmark's deterministic preparation and human public acceptance are complete, and the frozen scope is publicly visible in Draft PR #1 with passing CI. It is not merged, tagged, released, or archived. Remaining actions are PR review/merge and any separately authorized GitHub Release or Zenodo/DOI publication.
