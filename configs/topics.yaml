@@ -1,0 +1,16 @@
+topics:
+  - name: cancer_immunotherapy_rnaseq
+    query: >
+      ("cancer immunotherapy" OR "checkpoint inhibitor" OR "tumor microenvironment")
+      AND
+      ("RNA-seq" OR transcriptomics OR "single-cell RNA-seq")
+    core_keywords:
+      - cancer immunotherapy
+      - checkpoint inhibitor
+      - tumor microenvironment
+      - RNA-seq
+      - transcriptomics
+      - single-cell RNA-seq
+      - biomarker
+    retmax: 30
+    days_back: 30

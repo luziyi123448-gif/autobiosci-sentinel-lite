@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autobiosci-sentinel-lite"
+version = "0.3.0rc1"
+description = "Deterministic PubMed literature radar with an experimental metadata evidence-brief prototype."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "陆梓溢"},
+]
+license = {file = "LICENSE"}
+dependencies = [
+    "requests>=2.31",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[project.urls]
+Repository = "https://github.com/luziyi123448-gif/autobiosci-sentinel-lite"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

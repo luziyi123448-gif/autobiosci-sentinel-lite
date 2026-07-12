@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "AutoBioSci Sentinel Lite"
+type: software
+version: "0.3.0rc1"
+authors:
+  - family-names: "陆"
+    given-names: "梓溢"
+    affiliation: "Soochow University (苏州大学)"
+    orcid: "https://orcid.org/0009-0008-4743-6983"
+abstract: "A deterministic PubMed literature radar with an experimental metadata evidence-brief prototype."
+license: MIT
+repository-code: "https://github.com/luziyi123448-gif/autobiosci-sentinel-lite"
+keywords:
+  - PubMed
+  - literature monitoring
+  - research software
+  - reproducibility

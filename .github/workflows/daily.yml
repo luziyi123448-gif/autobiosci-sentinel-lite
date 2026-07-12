@@ -1,0 +1,92 @@
+name: Manual PubMed Radar
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+
+      - name: Test
+        run: pytest
+
+      - name: Record test status
+        run: echo "AUTOBIOSCI_TEST_STATUS=pytest passed in current workflow" >> "$GITHUB_ENV"
+
+      - name: Preserve previous review snapshot
+        run: |
+          mkdir -p .review_prev
+          if [ -f reports/review_records_frozen.jsonl ]; then
+            cp reports/review_records_frozen.jsonl .review_prev/review_records_frozen.jsonl
+          fi
+
+      - name: Run bounded collector
+        env:
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: >
+          python -m autobiosci_sentinel.cli worker
+          --auto
+          --config configs/topics.yaml
+          --db data/papers.sqlite
+          --report reports/daily_report.md
+          --max-jobs 3
+
+      - name: Refresh search coverage inventory
+        env:
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: >
+          python -m autobiosci_sentinel.cli review-search-coverage
+          --config configs/topics.yaml
+          --db data/papers.sqlite
+          --output reports/review_search_coverage.md
+          --json reports/review_search_coverage.json
+          --csv reports/review_search_coverage.csv
+
+      - name: Refresh review package
+        run: >
+          python -m autobiosci_sentinel.cli review
+          --config configs/topics.yaml
+          --db data/papers.sqlite
+          --output-dir reports
+
+      - name: Refresh citation verification
+        run: >
+          python -m autobiosci_sentinel.cli review-citation-verify
+          --input reports/review_citation_audit.csv
+          --output reports/review_citation_verification.md
+          --json reports/review_citation_verification.json
+          --csv reports/review_citation_verification.csv
+
+      - name: Write review update diff
+        run: >
+          python -m autobiosci_sentinel.cli review-update-diff
+          --old .review_prev
+          --new reports
+          --output reports/review_update_diff.md
+          --json reports/review_update_diff.json
+          --queue reports/human_update_queue.csv
+
+      - name: Refresh review package gates
+        run: >
+          python -m autobiosci_sentinel.cli review
+          --config configs/topics.yaml
+          --db data/papers.sqlite
+          --output-dir reports

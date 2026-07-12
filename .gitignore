@@ -1,0 +1,72 @@
+# Local tool folders and generated manifests
+.codex/
+.codex_tmp/
+.agents/
+.mcp/
+.mcp-cache/
+.claude/
+.cursor/
+GPT_MCP_WRITE_TEST.txt
+skills-manifest.md
+
+# Temporary files
+tmp/
+temp/
+.pytest_tmp/
+.pytest-temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Runtime and generated research artifacts
+data/
+outputs/
+reports/
+prototype/ai247/
+HUMAN_GATE.yaml
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+*.egg-info/
+build/
+dist/
+
+# Node caches
+node_modules/
+.npm/
+.pnpm-store/
+
+# Environment and secrets
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# OS and editor noise
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+.vs/
